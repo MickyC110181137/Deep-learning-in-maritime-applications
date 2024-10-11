@@ -1,0 +1,11 @@
+要手動裝graphviz
+https://graphviz.gitlab.io/download/
+
+要用
+conda install pydot(用pip會裝不到)
+
+引入要改
+from keras import layers, models, utils
+
+code要改(在最後輸出圖片的位置要加上utils.plot_model與show_layer_names=True)
+utils.plot_model(model, to_file='Functional_API_Sample_Model.png', show_layer_names=True)
